@@ -1,17 +1,3 @@
-"""
-hamilton_rec/scraper.py
-Scrapes drop-in and registered program schedules from the City of Hamilton
-recreation website and saves them to data/programs.json.
-
-The City of Hamilton embeds its schedule widget from ActiveNet. We target the
-publicly-accessible printable schedule PDFs / HTML pages that list structured
-data per facility, as well as the main program-category pages that contain
-program name, location, day, and time in HTML tables.
-
-Run directly:  python scraper.py
-Called by server.py on a schedule.
-"""
-
 import json
 import logging
 import re
@@ -27,10 +13,6 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
 )
 log = logging.getLogger(__name__)
-
-# ---------------------------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------------------------
 
 OUTPUT_PATH = Path(__file__).parent / "data" / "programs.json"
 
