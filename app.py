@@ -24,6 +24,7 @@ REFRESH_HOURS = 6
 # ---------------------------------------------------------------------------
 
 def refresh_loop():
+    time.sleep(5)  # allow server to boot
     while True:
         log.info("[Scheduler] Scraping Hamilton rec programs…")
         try:
