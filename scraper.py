@@ -14,6 +14,10 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
+# ---------------------------------------------------------------------------
+# Configuration
+# ---------------------------------------------------------------------------
+
 OUTPUT_PATH = Path(__file__).parent / "data" / "programs.json"
 
 HEADERS = {
