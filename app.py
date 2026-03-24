@@ -37,6 +37,8 @@ def refresh_loop():
 # Start scheduler only after first request (prevents Gunicorn double-start)
 @app.before_first_request
 def start_scheduler():
+    @app.before_first_request
+def start_scheduler():
     threading.Thread(target=refresh_loop, daemon=True).start()
 
 # ---------------------------------------------------------------------------
